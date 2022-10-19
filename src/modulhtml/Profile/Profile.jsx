@@ -1,10 +1,10 @@
 import React from "react";
-import Profile from "./Profile/Profile";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import Wallpaper from "./wallpaper/wallpaper";
-import style from "./Body.module.css";
+import style from "./Profile.module.css";
 import Post from "./Post/Post";
 
-const Body = () => {
+const Profile = () => {
   return (
     <div className={`${style.blog}`}>
       <Wallpaper
@@ -13,10 +13,10 @@ const Body = () => {
         }
         alt={"wallpaper"}
       />
-      <Profile />
+      <ProfileInfo />
       <Post />
     </div>
   );
 };
 
-export default Body;
+export default Profile;

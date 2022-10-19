@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./modulhtml/Header/Header";
 import Sidebar from "./modulhtml/Sidebar/Sidebar";
-import Profile from "./modulhtml/Body/Body";
+import Profile from "./modulhtml/Profile/Profile";
 import Messages from "./modulhtml/Messages/Messages";
 import Music from "./modulhtml/Music/Music";
 import News from "./modulhtml/News/News";

@@ -1,7 +1,7 @@
 import React from "react";
-import style from "./Profile.module.css";
+import style from "./ProfileInfo.module.css";
 import ProfileAv from "./ProfileAv/ProfileAv";
-import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import ProfileInfo from "./ProfileDesc/ProfileDesc";
 
 const Profile = () => {
   return (
