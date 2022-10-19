@@ -1,4 +1,4 @@
 .blog {
      width: 100%;
-     border: 15px solid gray;
+     border: 15px solid var(--background);
 }

@@ -2,9 +2,9 @@
      padding: 5px 20px;
 }
 .activeLink {
-     color:blueviolet;
+     color:var(--selected);
 }
 .sidebar {
      width: 15vw;
-     border: 15px solid gray;
+     border: 15px solid var(--background);
 }

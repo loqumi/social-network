@@ -1,10 +1,9 @@
 .header {
      height: 64px;
-     border: 15px solid gray;
+     border: 15px solid var(--background);
 }
 
 .image {
-     background-color: black;
      width: 64px;
      height: 64px;
 }
