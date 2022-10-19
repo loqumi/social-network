@@ -1,0 +1,10 @@
+.header {
+     height: 64px;
+     border: 15px solid gray;
+}
+
+.image {
+     background-color: black;
+     width: 64px;
+     height: 64px;
+}

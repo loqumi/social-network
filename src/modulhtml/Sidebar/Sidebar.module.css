@@ -1,0 +1,10 @@
+.item {
+     padding: 5px 20px;
+}
+.activeLink {
+     color:blueviolet;
+}
+.sidebar {
+     width: 15vw;
+     border: 15px solid gray;
+}

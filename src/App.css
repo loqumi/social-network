@@ -1,0 +1,29 @@
+body {
+  font-size: 20px;
+  background-color: grey;
+}
+
+.body {
+  background-color: rgb(155, 7, 51);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
