@@ -11,11 +11,6 @@ textarea {
      justify-content: end;
 }
 
-button {
-     width: 64px;
-     height: 32px;
-}
-
 .text {
      color: var(--text)
 }

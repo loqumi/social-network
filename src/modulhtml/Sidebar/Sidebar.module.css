@@ -1,10 +1,13 @@
 .item {
      padding: 5px 20px;
 }
+
 .activeLink {
-     color:var(--selected);
+     color: var(--selected);
 }
+
 .sidebar {
      width: 15vw;
      border: 15px solid var(--background);
+     border-radius: 24px;
 }

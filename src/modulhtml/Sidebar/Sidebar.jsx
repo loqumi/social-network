@@ -9,8 +9,14 @@ const Sidebar = () => {
         <ul>
           {sidebar.map(({ href, title }) => (
             <li key={title} className={style.item}>
-              <NavLink to={href}  className={({ isActive }) =>
-              isActive ? style.activeLink : undefined }>{title} </NavLink>
+              <NavLink
+                to={href}
+                className={({ isActive }) =>
+                  isActive ? style.activeLink : undefined
+                }
+              >
+                {title}
+              </NavLink>
             </li>
           ))}
         </ul>

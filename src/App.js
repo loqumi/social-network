@@ -26,6 +26,7 @@ const nav = [
   { path: "/", Element: Profile },
   { path: "/profile", Element: Profile },
   { path: "/messages", Element: Messages },
+  { path: "/messages/:id", Element: Messages },
   { path: "/news", Element: News },
   { path: "/music", Element: Music },
   { path: "/settings", Element: Settings },
