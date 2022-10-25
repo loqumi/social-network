@@ -2,7 +2,7 @@ import React from "react";
 import style from "./MyPost.module.css"
 const OldPost = (props) => {
      return(
-          <div className={style.item}>
+          <div className={`${style.item} ${style.text}`}>
                <img className={style.avatar} src={props.src} alt="avatar"></img>
                {props.message}
                <div>

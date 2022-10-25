@@ -1,9 +1,9 @@
 import React from "react";
 import style from "./NewPost.module.css"
-const NewPost = (props) => {
+const NewPost = () => {
   return (
     <div>
-      <h2>My Posts</h2>
+      <h2 className={style.text}>My Posts</h2>
       <textarea
         placeholder="Write new intresting post!!"
         className={style.textarea}

@@ -1,24 +1,17 @@
 import React from "react";
-import style from "./ProfileInfo.module.css";
 import ProfileAv from "./ProfileAv/ProfileAv";
-import ProfileInfo from "./ProfileDesc/ProfileDesc";
+import ProfileDesc from "./ProfileDesc/ProfileDesc";
 
-const Profile = () => {
+const ProfileInfo = () => {
   return (
     <div className="flex container">
       <ProfileAv
         src={"https://klike.net/uploads/posts/2019-03/1551511801_1.jpg"}
         alt="avatar"
       />
-      <ProfileInfo username={"Egorka"} />
+      <ProfileDesc username={"Egorka"} />
     </div>
   );
 };
 
-const info_about = [
-  { title: "Date of Birth" },
-  { title: "City" },
-  { title: "Education" },
-  { title: "Website" },
-];
-export default Profile;
+export default ProfileInfo;

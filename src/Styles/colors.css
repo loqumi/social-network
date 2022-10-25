@@ -1,8 +1,8 @@
 :root {
      --text: rgb(255, 255, 255);
-     --main: rgb(157, 219, 70);
-     --button: rgb(28, 207, 112);
-     --hover: rgb(154, 100, 50);
-     --selected: rgb(154, 100, 50);
-     --background: rgb(174, 136, 211);
+     --main: #56494E;
+     --button: #A62639;
+     --hover: #A62639;
+     --selected: #DB323D;
+     --background: #DB323D;
  }

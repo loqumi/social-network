@@ -1,9 +1,9 @@
 import React from "react";
 import style from "./ProfileDesc.module.css";
 
-const ProfileInfo = (props) => {
+const ProfileDesc = (props) => {
   return (
-    <div className="about">
+    <div className={`${"about"} ${style.text}`}>
       <div className={style.username}>{props.username}</div>
       <ul className={style.ulstyle}>
         {info_about.map(({ title }) => (
@@ -23,4 +23,4 @@ const info_about = [
   { title: "Website" },
 ];
 
-export default ProfileInfo;
+export default ProfileDesc;
