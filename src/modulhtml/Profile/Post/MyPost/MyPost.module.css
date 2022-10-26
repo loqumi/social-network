@@ -4,7 +4,12 @@
      width: 64px;
 }
 
+.username {
+     color: var(--text);
+}
+
 .item {
+     margin: 0 auto;
      width: 50%;
      border-radius: 8px ;
      background: var(--main);

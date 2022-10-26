@@ -7,11 +7,13 @@ const Post = () => {
     <div>
       <NewPost/>
       <MyPost
+        username="Vasiliy Piraniev"
         src={"https://vraki.net/sites/default/files/inline/images/2_3.png"}
         message="Hi, how are you?"
         likesCount="15"
       />
       <MyPost
+        username="Lorem, ipsum."
         src={
           "https://abrakadabra.fun/uploads/posts/2022-02/1644764716_1-abrakadabra-fun-p-avatarki-iz-pinteresta-estetichnie-1.png"
         }
