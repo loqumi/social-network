@@ -1,5 +1,5 @@
-import React from "react"
+import React from "react";
 const News = () => {
-     return
-}
-export default News
+  return;
+};
+export default News;

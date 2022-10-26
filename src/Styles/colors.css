@@ -1,9 +1,9 @@
 :root {
-     --dark_main: #473c40;
-     --text: rgb(255, 255, 255);
-     --main: #56494E;
-     --button: #A62639;
-     --hover: #A62639;
-     --selected: #DB323D;
-     --background: #DB323D;
- }
+    --dark_main: #473c40;
+    --text: rgb(255, 255, 255);
+    --main: #56494E;
+    --button: #A62639;
+    --hover: #A62639;
+    --selected: #DB323D;
+    --background: #DB323D;
+}

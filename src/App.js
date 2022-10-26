@@ -14,8 +14,8 @@ const App = () => {
       <div className="flex container">
         <Sidebar />
         <Routes>
-        {nav.map(({ path, Element }) => (
-            <Route key={path} path={path} element={<Element />}/>
+          {nav.map(({ path, Element }) => (
+            <Route key={path} path={path} element={<Element />} />
           ))}
         </Routes>
       </div>

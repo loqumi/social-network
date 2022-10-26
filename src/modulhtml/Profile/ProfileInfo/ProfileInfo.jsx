@@ -9,7 +9,7 @@ const ProfileInfo = () => {
         src={"https://klike.net/uploads/posts/2019-03/1551511801_1.jpg"}
         alt="avatar"
       />
-      <ProfileDesc username={"Egor Kirdypin"}/>
+      <ProfileDesc username={"Egor Kirdypin"} />
     </div>
   );
 };

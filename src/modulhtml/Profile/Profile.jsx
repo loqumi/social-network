@@ -7,7 +7,7 @@ import Post from "./Post/Post";
 const Profile = () => {
   return (
     <div className={style.body}>
-      <Wallpaper/>
+      <Wallpaper />
       <ProfileInfo />
       <Post />
     </div>

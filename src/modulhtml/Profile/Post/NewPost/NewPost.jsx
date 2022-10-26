@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./NewPost.module.css"
+import style from "./NewPost.module.css";
 const NewPost = () => {
   return (
     <form>
@@ -9,7 +9,7 @@ const NewPost = () => {
         className={style.textarea}
       />
       <div className={style.buttons}>
-        <input type="reset" className={style.button} value="New post!"/>
+        <input type="reset" className={style.button} value="New post!" />
       </div>
     </form>
   );
