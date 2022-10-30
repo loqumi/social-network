@@ -3,11 +3,11 @@ import style from "./Messages.module.css";
 import UserChats from "./UserChats/UserChats";
 import MessagesFromUser from "./MessagesFromUser/MessagesFromUser";
 
-const Messages = () => {
+const Messages = (props) => {
   return (
     <div className={style.body}>
-      <UserChats />
-      <MessagesFromUser />
+      <UserChats state={props.state.data}/>
+      <MessagesFromUser state={props.state.data}/>
     </div>
   );
 };

@@ -4,12 +4,12 @@ import Wallpaper from "./wallpaper/wallpaper";
 import style from "./Profile.module.css";
 import Post from "./Post/Post";
 
-const Profile = () => {
+const Profile = (props) => {
   return (
     <div className={style.body}>
       <Wallpaper />
-      <ProfileInfo />
-      <Post />
+      <ProfileInfo state={props.state.data}/>
+      <Post state={props.state.data}/>
     </div>
   );
 };

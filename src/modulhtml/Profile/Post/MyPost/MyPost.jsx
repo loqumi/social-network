@@ -5,7 +5,7 @@ const OldPost = (props) => {
     <div className={style.item}>
       <span className={style.username}>{props.username}</span>
       <div className={style.post}>
-        <img className={style.avatar} avatar={props.avatar} alt="avatar" />
+        <img className={style.avatar} src={props.avatar} alt="avatar" />
         <div className={style.text}>
           {props.message}
           <span className={style.likes}>

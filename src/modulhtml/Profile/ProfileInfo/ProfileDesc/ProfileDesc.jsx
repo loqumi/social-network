@@ -8,7 +8,7 @@ const ProfileDesc = (props) => {
         {props.username}
       </div>
       <ul className={style.ulstyle}>
-        {info_about.map(({ title, value }) => (
+        {props.state.map(({ title, value }) => (
           <li key={title} className={`${style.textstyle} ${style.item}`}>
             <div>{title}</div>
             <div>{value}</div>
@@ -18,12 +18,5 @@ const ProfileDesc = (props) => {
     </div>
   );
 };
-
-const info_about = [
-  { title: "Date of Birth:", value: "17.04.2001" },
-  { title: "City:", value: "Fergana" },
-  { title: "Education:", value: "Vocational secondary" },
-  { title: "Website:", value: "http://github.com/loqumi" },
-];
 
 export default ProfileDesc;
