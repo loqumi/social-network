@@ -1,0 +1,28 @@
+.item {
+     display: flex;
+     justify-content: space-between;
+     font-size: 18px;
+}
+
+.ulstyle {
+     display: flex;
+     flex-direction: column;
+}
+
+.textstyle {
+     border-bottom: solid 3px var(--background);
+     color: var(--text);
+     padding: 0 5px;
+}
+
+.username {
+     font-size: 28px;
+}
+
+.text {
+     border: var(--dark_main) solid 5px;
+     width: 40%;
+     height: 160px;
+     background: var(--main);
+     border-radius: 12px;
+}

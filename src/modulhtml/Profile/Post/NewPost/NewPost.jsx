@@ -1,17 +1,17 @@
 import React from "react";
-import style from "./NewPost.module.css"
-const NewPost = (props) => {
+import style from "./NewPost.module.css";
+const NewPost = () => {
   return (
-    <div>
-      <h2>My Posts</h2>
+    <form>
+      <h2 className={style.text}>My Posts</h2>
       <textarea
         placeholder="Write new intresting post!!"
         className={style.textarea}
-      ></textarea>
+      />
       <div className={style.buttons}>
-        <button className={style.button}>Send</button>
+        <input type="reset" className={style.button} value="New post!" />
       </div>
-    </div>
+    </form>
   );
 };
 export default NewPost;

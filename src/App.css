@@ -1,10 +1,13 @@
+@import "./Styles/colors.css";
+
 body {
   font-size: 20px;
-  background-color: grey;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .body {
-  background-color: rgb(155, 7, 51);
+  background-color: var(--main);
 }
 
 .container {
@@ -25,5 +28,9 @@ ul {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--text);
+}
+
+a:hover {
+  color: var(--hover);
 }

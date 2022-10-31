@@ -1,0 +1,40 @@
+.avatar {
+     border-radius: 50%;
+     height: 64px;
+     width: 64px;
+}
+
+.username {
+     color: var(--text);
+}
+
+.item {
+     margin: 0 auto;
+     width: 50%;
+     border-radius: 8px;
+     background: var(--main);
+     margin-bottom: 15px;
+}
+
+.like_img {
+     cursor: pointer;
+     width: 18px;
+}
+
+.post {
+     display: flex;
+     align-items: center;
+     color: var(--text);
+}
+
+.text {
+     width: 100%;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+}
+
+.likes {
+     vertical-align: bottom;
+     font-size: 15px;
+}
