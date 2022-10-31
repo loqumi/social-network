@@ -24,20 +24,9 @@ let state = {
   messagespage: {
     chats: [
       { link: "/messages/1", name: "Vasiliy Piraniev" },
-      { link: "/messages/2", name: "My self" },
-      { link: "/messages/3", name: "kto to eshe" },
-      { link: "/messages/4", name: "Lorem, ipsum." },
-      { link: "/messages/5", name: "Lorem kto to tam" },
-      { link: "/messages/6", name: "Kto takoy lorem" },
-      { link: "/messages/7", name: "Ne ya a kto to eshe" },
     ],
     messages: [
-      { time: "12.12.2001", message: "ПРиВЕТ МЕДВЕД))" },
-      { time: "12.1.2001", message: "ПРиВЕТ МЕДВЕД))" },
-      { time: "12.4.2001", message: "ПРиВЕТ МЕДВЕД))" },
-      { time: "12.2.2001", message: "ПРиВЕТ МЕДВЕД))" },
-      { time: "12.6.2001", message: "ПРиВЕТ МЕДВЕД))" },
-      { time: "12.5.2001", message: "ПРиВЕТ МЕДВЕД))" },
+      { time: "30.10.2022", message: "Hi, what`s up?" },
     ],
   },
   sidebar: {

@@ -10,6 +10,10 @@ const MessagesFromUser = (props) => {
           <div className={style.time}>{time}</div>
         </div>
       ))}
+      <form className={style.sendmessage}>
+        <textarea className={style.textarea}></textarea>
+        <input type="reset" value="Send message"/>
+      </form>
     </div>
   );
 };

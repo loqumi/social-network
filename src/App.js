@@ -13,8 +13,8 @@ const App = (props) => {
   let nav = [
     { path: "/", Element: Profile, data : props.state.profilepage },
     { path: "/profile", Element: Profile, data : props.state.profilepage },
-    { path: "/messages", Element: Messages, data : props.state.messagespage},
-    { path: "/messages/:id", Element: Messages },
+    { path: "/messages", Element: Messages, data : props.state.messagespage },
+    { path: "/messages/:id", Element: Messages, data : props.state.messagespage },
     { path: "/news", Element: News },
     { path: "/music", Element: Music },
     { path: "/settings", Element: Settings },
