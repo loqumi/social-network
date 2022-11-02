@@ -8,8 +8,8 @@ const Profile = (props) => {
   return (
     <div className={style.body}>
       <Wallpaper />
-      <ProfileInfo state={props.state.data}/>
-      <Post state={props.state.data} addPost={props.addPost}/>
+      <ProfileInfo infoabout={props.data.infoabout} username={props.data.username} avatar={props.data.profileAvatar}/>
+      <Post post={props.data.post} newPostText={props.data.newPostText} updateNewPostText={props.updateNewPostText} addPost={props.addPost}/>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const ProfileDesc = (props) => {
         {props.username}
       </div>
       <ul className={style.ulstyle}>
-        {props.state.map(({ title, value }) => (
+        {props.infoabout.map(({ title, value }) => (
           <li key={title} className={`${style.textstyle} ${style.item}`}>
             <div>{title}</div>
             <div>{value}</div>

@@ -6,10 +6,10 @@ const ProfileInfo = (props) => {
   return (
     <div className="flex container">
       <ProfileAv
-        src={"https://klike.net/uploads/posts/2019-03/1551511801_1.jpg"}
+        src={props.avatar}
         alt="avatar"
       />
-      <ProfileDesc username={"Egor Kirdypin"} state={props.state.infoabout}/>
+      <ProfileDesc infoabout={props.infoabout} username={props.username}/>
     </div>
   );
 };

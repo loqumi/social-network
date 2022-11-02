@@ -6,8 +6,8 @@ import MessagesFromUser from "./MessagesFromUser/MessagesFromUser";
 const Messages = (props) => {
   return (
     <div className={style.body}>
-      <UserChats state={props.state.data}/>
-      <MessagesFromUser state={props.state.data}/>
+      <UserChats chats={props.data.chats}/>
+      <MessagesFromUser messages={props.data.messages}/>
     </div>
   );
 };

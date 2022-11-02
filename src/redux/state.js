@@ -1,7 +1,11 @@
-import {rerenderEntireTree} from "../render"
+import { rerenderEntireTree } from "../render";
 
 let state = {
-  profilepage : {
+  profilepage: {
+    username: "Egor Kirdyapin",
+
+    profileAvatar: "https://klike.net/uploads/posts/2019-03/1551511801_1.jpg",
+
     infoabout: [
       { title: "Date of Birth:", value: "17.04.2001" },
       { title: "City:", value: "Fergana" },
@@ -13,23 +17,20 @@ let state = {
         username: "User 2",
         avatar: "https://vraki.net/sites/default/files/inline/images/2_3.png",
         message: "Hi, how are you?",
-        likesCount: "15",
+        likesCount: 15,
       },
       {
         username: "User 2",
         avatar: "https://vraki.net/sites/default/files/inline/images/2_3.png",
         message: "It`s my first post!",
-        likesCount: "31",
+        likesCount: 31,
       },
     ],
+    newPostText: "",
   },
   messagespage: {
-    chats: [
-      { link: "/messages/1", name: "Vasiliy Piraniev" },
-    ],
-    messages: [
-      { time: "30.10.2022", message: "Hi, what`s up?" },
-    ],
+    chats: [{ link: "/messages/1", name: "Vasiliy Piraniev" }],
+    messages: [{ time: "30.10.2022", message: "Hi, what`s up?" }],
   },
   sidebar: {
     friends: [
@@ -62,15 +63,21 @@ let state = {
   },
 };
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
   let newPost = {
-    username: "Egor Kirdyapin",
-    avatar: "https://klike.net/uploads/posts/2019-03/1551511801_1.jpg",
-    message: postMessage,
-    likesCount: 0
-  }
+    username: state.profilepage.username,
+    avatar: state.profilepage.profileAvatar,
+    message: state.profilepage.newPostText,
+    likesCount: 0,
+  };
   state.profilepage.post.unshift(newPost);
+  state.profilepage.newPostText = "";
   rerenderEntireTree(state);
-}
+};
+
+export let updateNewPostText = (NewText) => {
+  state.profilepage.newPostText = NewText;
+  rerenderEntireTree(state);
+};
 
 export default state;
