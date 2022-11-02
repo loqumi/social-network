@@ -5,9 +5,13 @@ import MyPost from "./MyPost/MyPost";
 const Post = (props) => {
   return (
     <div>
-      <NewPost addPost={props.addPost} newPostText={props.newPostText} updateNewPostText={props.updateNewPostText}/>
+      <NewPost
+        addPost={props.addPost}
+        newPostText={props.newPostText}
+        updateNewPostText={props.updateNewPostText}
+      />
       {props.post.map(({ username, avatar, message, likesCount }) => (
-        <MyPost 
+        <MyPost
           key={message}
           username={username}
           avatar={avatar}
