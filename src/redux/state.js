@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render"
+
 let state = {
   profilepage : {
     infoabout: [
@@ -8,13 +10,13 @@ let state = {
     ],
     post: [
       {
-        username: "Vasiliy Piraniev",
+        username: "User 2",
         avatar: "https://vraki.net/sites/default/files/inline/images/2_3.png",
         message: "Hi, how are you?",
         likesCount: "15",
       },
       {
-        username: "Lorem, ipsum.",
+        username: "User 2",
         avatar: "https://vraki.net/sites/default/files/inline/images/2_3.png",
         message: "It`s my first post!",
         likesCount: "31",
@@ -59,5 +61,16 @@ let state = {
     ],
   },
 };
+
+export let addPost = (postMessage) => {
+  let newPost = {
+    username: "Egor Kirdyapin",
+    avatar: "https://klike.net/uploads/posts/2019-03/1551511801_1.jpg",
+    message: postMessage,
+    likesCount: 0
+  }
+  state.profilepage.post.unshift(newPost);
+  rerenderEntireTree(state);
+}
 
 export default state;

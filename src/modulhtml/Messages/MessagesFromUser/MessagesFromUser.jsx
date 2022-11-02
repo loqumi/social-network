@@ -2,6 +2,14 @@ import React from "react";
 import style from "./MessagesFromUser.module.css";
 
 const MessagesFromUser = (props) => {
+
+  let writeMessage = React.createRef();
+
+  let sendMessage = () => {
+    let newMessage =  writeMessage.current.value;
+    alert(newMessage)
+  }
+
   return (
     <div className={style.message}>
       {props.state.messages.map(({ time, message }) => (
@@ -11,8 +19,8 @@ const MessagesFromUser = (props) => {
         </div>
       ))}
       <form className={style.sendmessage}>
-        <textarea className={style.textarea}></textarea>
-        <input type="reset" value="Send message"/>
+        <textarea ref={writeMessage} className={style.textarea}></textarea>
+        <input onClick={sendMessage} type="button" value="Send message"/>
       </form>
     </div>
   );
