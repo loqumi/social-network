@@ -1,5 +1,6 @@
-import { rerenderEntireTree } from "../render";
-
+let rerenderEntireTree = () => {
+  console.log("State changed");
+};
 let state = {
   profilepage: {
     username: "Egor Kirdyapin",
@@ -63,7 +64,7 @@ let state = {
   },
 };
 
-export let addPost = () => {
+export const addPost = () => {
   let newPost = {
     username: state.profilepage.username,
     avatar: state.profilepage.profileAvatar,
@@ -75,9 +76,12 @@ export let addPost = () => {
   rerenderEntireTree(state);
 };
 
-export let updateNewPostText = (NewText) => {
+export const updateNewPostText = (NewText) => {
   state.profilepage.newPostText = NewText;
   rerenderEntireTree(state);
 };
 
+export const subscribe = (observer) => {
+  rerenderEntireTree = observer;
+};
 export default state;
