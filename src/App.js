@@ -20,8 +20,7 @@ const App = (props) => {
             element={
               <Profile
                 data={props.state.profilepage}
-                addPost={props.addPost}
-                updateNewPostText={props.updateNewPostText}
+                dispatch={props.dispatch}
               />
             }
           />
@@ -30,8 +29,7 @@ const App = (props) => {
             element={
               <Profile
                 data={props.state.profilepage}
-                addPost={props.addPost}
-                updateNewPostText={props.updateNewPostText}
+                dispatch={props.dispatch}
               />
             }
           />

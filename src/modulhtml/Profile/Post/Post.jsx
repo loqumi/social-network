@@ -6,9 +6,8 @@ const Post = (props) => {
   return (
     <div>
       <NewPost
-        addPost={props.addPost}
+        dispatch={props.dispatch}
         newPostText={props.newPostText}
-        updateNewPostText={props.updateNewPostText}
       />
       {props.post.map(({ username, avatar, message, likesCount }) => (
         <MyPost
