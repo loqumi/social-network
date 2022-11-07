@@ -3,8 +3,12 @@ import profileReducer from "./profile-reducer";
 import messagesReducer from "./messages-reducer";
 import sidebarReducer from "./sidebar-reducer";
 
-let store = configureStore({reducer : {profilepage : profileReducer,
-messagespage : messagesReducer,
-sidebar : sidebarReducer}});
+let store = configureStore({
+  reducer: {
+    profilepage: profileReducer,
+    messagespage: messagesReducer,
+    sidebar: sidebarReducer,
+  },
+});
 
-export default store
+export default store;
