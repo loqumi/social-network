@@ -35,7 +35,7 @@ const App = (props) => {
           />
           <Route
             path="/messages/*"
-            element={<Messages data={props.state.messagespage} />}
+            element={<Messages data={props.state.messagespage} dispatch={props.dispatch} />}
           />
           <Route path="/news" element={<News />} />
           <Route path="/music" element={<Music />} />

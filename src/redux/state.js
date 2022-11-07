@@ -1,5 +1,9 @@
-const ADD_POST = "ADD-POST"
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT"
+const ADD_POST = "ADD-POST";
+const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+
+const UPDATE_NEW_MESSAGE_BODY = "UPDATE-NEW-MESSAGE-BODY";
+const SEND_MESSAGE = "SEND-MESSAGE";
+
 let store = {
   _state: {
     profilepage: {
@@ -31,7 +35,8 @@ let store = {
     },
     messagespage: {
       chats: [{ link: "/messages/1", name: "Vasiliy Piraniev" }],
-      messages: [{ time: "30.10.2022", message: "Hi, what`s up?" }],
+      messages: [{ message: "Hi, what`s up?" }],
+      newMessageBody: "",
     },
     sidebar: {
       friends: [
@@ -75,7 +80,7 @@ let store = {
   },
 
   dispatch(action) {
-    if (action.type === "ADD-POST") {
+    if (action.type === ADD_POST) {
       let newPost = {
         username: this._state.profilepage.username,
         avatar: this._state.profilepage.profileAvatar,
@@ -85,16 +90,29 @@ let store = {
       this._state.profilepage.post.unshift(newPost);
       this._state.profilepage.newPostText = "";
       this._callBackObserver(this._state);
-    } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+
+    } else if (action.type === UPDATE_NEW_POST_TEXT) {
       this._state.profilepage.newPostText = action.NewText;
+      this._callBackObserver(this._state);
+
+    } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
+      this._state.messagespage.newMessageBody = action.body;
+      this._callBackObserver(this._state);
+
+    } else if (action.type === SEND_MESSAGE) {
+      let body = this._state.messagespage.newMessageBody;
+      this._state.messagespage.newMessageBody = "";
+      this._state.messagespage.messages.push({message: body});
       this._callBackObserver(this._state);
     }
   },
 };
 
 export const addPostActionCreator = () => ({type: ADD_POST})
-
 export const updateNewPostTextActionCreater = (post) => ({type: UPDATE_NEW_POST_TEXT, NewText: post})
+
+export const sendMessageCreator = () => ({type: SEND_MESSAGE})
+export const updateNewMessageBodyCreator = (body) => ({type: UPDATE_NEW_MESSAGE_BODY, body: body})
 
 export default store;
 window.store = store

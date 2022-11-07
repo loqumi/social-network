@@ -1,25 +1,37 @@
 import React from "react";
+import { sendMessageCreator, updateNewMessageBodyCreator } from "../../../redux/state";
 import style from "./MessagesFromUser.module.css";
 
 const MessagesFromUser = (props) => {
-  let writeMessage = React.createRef();
+  let newMessageBody = props.newMessageBody;
 
-  let sendMessage = () => {
-    let newMessage = writeMessage.current.value;
-    alert(newMessage);
-  };
+  let onSendMessageClick = () => {
+    props.dispatch(sendMessageCreator())
+  }
+
+  let onNewMessageChange = (e) => {
+    let body = e.target.value;
+    props.dispatch(updateNewMessageBodyCreator(body))
+  }
 
   return (
     <div className={style.message}>
-      {props.messages.map(({ time, message }) => (
-        <div key={time} className={style.item}>
+      {props.messages.map(({ message }) => (
+        <div key={message} className={style.item}>
           <div>{message}</div>
-          <div className={style.time}>{time}</div>
         </div>
       ))}
       <form className={style.sendmessage}>
-        <textarea ref={writeMessage} className={style.textarea}></textarea>
-        <input onClick={sendMessage} type="button" value="Send message" />
+        <textarea
+          value={newMessageBody}
+          onChange={onNewMessageChange}
+          className={style.textarea}
+        />
+        <input
+          onClick={onSendMessageClick}
+          type="button"
+          value="Send message"
+        />
       </form>
     </div>
   );

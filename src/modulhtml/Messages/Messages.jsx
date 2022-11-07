@@ -7,7 +7,7 @@ const Messages = (props) => {
   return (
     <div className={style.body}>
       <UserChats chats={props.data.chats} />
-      <MessagesFromUser messages={props.data.messages} />
+      <MessagesFromUser messages={props.data.messages} newMessageBody={props.data.newMessageBody} dispatch={props.dispatch}/>
     </div>
   );
 };
