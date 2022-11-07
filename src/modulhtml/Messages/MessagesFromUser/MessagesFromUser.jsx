@@ -1,5 +1,5 @@
 import React from "react";
-import { sendMessageCreator, updateNewMessageBodyCreator } from "../../../redux/state";
+import { sendMessageCreator, updateNewMessageBodyCreator } from "../../../redux/messages-reducer";
 import style from "./MessagesFromUser.module.css";
 
 const MessagesFromUser = (props) => {

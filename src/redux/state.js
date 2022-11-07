@@ -1,8 +1,6 @@
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
-
-const UPDATE_NEW_MESSAGE_BODY = "UPDATE-NEW-MESSAGE-BODY";
-const SEND_MESSAGE = "SEND-MESSAGE";
+import profileReducer from "./profile-reducer";
+import messagesReducer from "./messages-reducer";
+import sidebarReducer from "./sidebar-reducer";
 
 let store = {
   _state: {
@@ -80,39 +78,16 @@ let store = {
   },
 
   dispatch(action) {
-    if (action.type === ADD_POST) {
-      let newPost = {
-        username: this._state.profilepage.username,
-        avatar: this._state.profilepage.profileAvatar,
-        message: this._state.profilepage.newPostText,
-        likesCount: 0,
-      };
-      this._state.profilepage.post.unshift(newPost);
-      this._state.profilepage.newPostText = "";
-      this._callBackObserver(this._state);
+    this._state.profilepage = profileReducer(this._state.profilepage, action);
+    this._state.messagespage = messagesReducer(
+      this._state.messagespage,
+      action
+    );
+    this._state.sidebar = sidebarReducer(this._state.sidebar, action);
 
-    } else if (action.type === UPDATE_NEW_POST_TEXT) {
-      this._state.profilepage.newPostText = action.NewText;
-      this._callBackObserver(this._state);
-
-    } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
-      this._state.messagespage.newMessageBody = action.body;
-      this._callBackObserver(this._state);
-
-    } else if (action.type === SEND_MESSAGE) {
-      let body = this._state.messagespage.newMessageBody;
-      this._state.messagespage.newMessageBody = "";
-      this._state.messagespage.messages.push({message: body});
-      this._callBackObserver(this._state);
-    }
+    this._callBackObserver(this._state);
   },
 };
 
-export const addPostActionCreator = () => ({type: ADD_POST})
-export const updateNewPostTextActionCreater = (post) => ({type: UPDATE_NEW_POST_TEXT, NewText: post})
-
-export const sendMessageCreator = () => ({type: SEND_MESSAGE})
-export const updateNewMessageBodyCreator = (body) => ({type: UPDATE_NEW_MESSAGE_BODY, body: body})
-
 export default store;
-window.store = store
+window.store = store;

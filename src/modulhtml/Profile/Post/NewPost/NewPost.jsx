@@ -1,18 +1,15 @@
 import React from "react";
 import style from "./NewPost.module.css";
-import { addPostActionCreator, updateNewPostTextActionCreater } from "../../../../redux/state";
+import { addPostActionCreator, updateNewPostTextActionCreater } from "../../../../redux/profile-reducer";
 
 const NewPost = (props) => {
-  let NewPostElement = React.createRef();
-
   let addPost = () => {
     props.dispatch(addPostActionCreator());
   };
 
-  let onPostChange = () => {
-    let post = NewPostElement.current.value;
-    let action = updateNewPostTextActionCreater(post);
-    props.dispatch(action);
+  let onPostChange = (e) => {
+    let post = e.target.value;
+    props.dispatch(updateNewPostTextActionCreater(post));
   };
 
   return (
@@ -22,7 +19,6 @@ const NewPost = (props) => {
         onChange={onPostChange}
         placeholder="Write new intresting post!!"
         className={style.textarea}
-        ref={NewPostElement}
         value={props.newPostText}
       />
       <div className={style.buttons}>
