@@ -3,7 +3,7 @@ import {
   sendMessageCreator,
   updateNewMessageBodyCreator,
 } from "../../../redux/messages-reducer";
-import MessagesFromUser from "./MessagesFromUser"
+import MessagesFromUser from "./MessagesFromUser";
 
 const MessagesFromUserContainer = (props) => {
   let state = props.store.getState();

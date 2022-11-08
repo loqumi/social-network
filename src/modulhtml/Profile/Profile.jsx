@@ -8,12 +8,8 @@ const Profile = (props) => {
   return (
     <div className={style.body}>
       <Wallpaper />
-      <ProfileInfo
-        store={props.store}
-      />
-      <Post
-        store={props.store}
-      />
+      <ProfileInfo store={props.store} />
+      <Post store={props.store} />
     </div>
   );
 };

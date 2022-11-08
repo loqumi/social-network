@@ -13,24 +13,10 @@ const App = (props) => {
     <BrowserRouter>
       <Header />
       <div className="flex container">
-        <Sidebar state={props.state.sidebar} />
+        <Sidebar store={props.store} />
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Profile
-                store={props.store}
-              />
-            }
-          />
-          <Route
-            path="/profile"
-            element={
-              <Profile
-                store={props.store}
-              />
-            }
-          />
+          <Route path="/" element={<Profile store={props.store} />} />
+          <Route path="/profile" element={<Profile store={props.store} />} />
           <Route
             path="/messages/*"
             element={<Messages store={props.store} />}

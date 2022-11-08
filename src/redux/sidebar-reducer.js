@@ -26,7 +26,7 @@ let initialState = {
     { href: "music", title: "Music" },
     { href: "settings", title: "Settings" },
   ],
-}
+};
 
 const sidebarReducer = (state = initialState, action) => {
   return state;

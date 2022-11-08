@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./MyPost.module.css";
+
 const OldPost = (props) => {
   return (
     <div className={style.item}>

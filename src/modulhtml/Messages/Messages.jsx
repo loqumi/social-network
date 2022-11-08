@@ -7,7 +7,7 @@ const Messages = (props) => {
   return (
     <div className={style.body}>
       <UserChatsContainer store={props.store} />
-      <MessagesFromUserContainer store={props.store}/>
+      <MessagesFromUserContainer store={props.store} />
     </div>
   );
 };

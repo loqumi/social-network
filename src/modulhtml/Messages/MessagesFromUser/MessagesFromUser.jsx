@@ -5,13 +5,13 @@ const MessagesFromUser = (props) => {
   let newMessageBody = props.newMessageBody;
 
   let onSendMessageClick = () => {
-    props.sendMessage()
-  }
+    props.sendMessage();
+  };
 
   let onNewMessageChange = (e) => {
     let body = e.target.value;
     props.updateNewMessageBody(body);
-  }
+  };
 
   return (
     <div className={style.message}>
