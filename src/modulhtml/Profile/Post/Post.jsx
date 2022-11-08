@@ -1,15 +1,13 @@
 import React from "react";
-import NewPost from "./NewPost/NewPost";
 import MyPost from "./MyPost/MyPost";
+import MyPostsContainer from "./NewPost/NewPostContainer";
 
 const Post = (props) => {
+  let state = props.store.getState();
   return (
     <div>
-      <NewPost
-        dispatch={props.dispatch}
-        newPostText={props.newPostText}
-      />
-      {props.post.map(({ username, avatar, message, likesCount }) => (
+      <MyPostsContainer store={props.store} />
+      {state.profilepage.post.map(({ username, avatar, message, likesCount }) => (
         <MyPost
           key={message}
           username={username}

@@ -1,15 +1,14 @@
 import React from "react";
 import style from "./NewPost.module.css";
-import { addPostActionCreator, updateNewPostTextActionCreater } from "../../../../redux/profile-reducer";
 
 const NewPost = (props) => {
-  let addPost = () => {
-    props.dispatch(addPostActionCreator());
+  let onAddPost = () => {
+    props.addPost();
   };
 
   let onPostChange = (e) => {
     let post = e.target.value;
-    props.dispatch(updateNewPostTextActionCreater(post));
+    props.updateNewPostText(post);
   };
 
   return (
@@ -23,7 +22,7 @@ const NewPost = (props) => {
       />
       <div className={style.buttons}>
         <input
-          onClick={addPost}
+          onClick={onAddPost}
           type="button"
           className={style.button}
           value="New post!"

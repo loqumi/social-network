@@ -3,10 +3,11 @@ import ProfileAv from "./ProfileAv/ProfileAv";
 import ProfileDesc from "./ProfileDesc/ProfileDesc";
 
 const ProfileInfo = (props) => {
+  let state = props.store.getState().profilepage;
   return (
     <div className="flex container">
-      <ProfileAv src={props.avatar} alt="avatar" />
-      <ProfileDesc infoabout={props.infoabout} username={props.username} />
+      <ProfileAv src={state.profileAvatar} alt="avatar" />
+      <ProfileDesc infoabout={state.infoabout} username={state.username} />
     </div>
   );
 };

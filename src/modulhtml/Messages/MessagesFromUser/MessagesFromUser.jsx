@@ -1,17 +1,16 @@
 import React from "react";
-import { sendMessageCreator, updateNewMessageBodyCreator } from "../../../redux/messages-reducer";
 import style from "./MessagesFromUser.module.css";
 
 const MessagesFromUser = (props) => {
   let newMessageBody = props.newMessageBody;
 
   let onSendMessageClick = () => {
-    props.dispatch(sendMessageCreator())
+    props.sendMessage()
   }
 
   let onNewMessageChange = (e) => {
     let body = e.target.value;
-    props.dispatch(updateNewMessageBodyCreator(body))
+    props.updateNewMessageBody(body);
   }
 
   return (

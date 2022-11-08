@@ -9,14 +9,10 @@ const Profile = (props) => {
     <div className={style.body}>
       <Wallpaper />
       <ProfileInfo
-        infoabout={props.data.infoabout}
-        username={props.data.username}
-        avatar={props.data.profileAvatar}
+        store={props.store}
       />
       <Post
-        post={props.data.post}
-        newPostText={props.data.newPostText}
-        dispatch={props.dispatch}
+        store={props.store}
       />
     </div>
   );
