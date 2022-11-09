@@ -25,6 +25,7 @@ let initialState = {
     { href: "news", title: "News" },
     { href: "music", title: "Music" },
     { href: "settings", title: "Settings" },
+    { href: "users", title: "Users"},
   ],
 };
 
