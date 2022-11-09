@@ -1,10 +1,11 @@
-import React from "react";
-import UserChats from "./UserChats"
+import UserChats from "./UserChats";
+import { connect } from "react-redux";
 
-const UserChatsContainer = (props) => {
-  let state = props.store.getState();
-
-  return <UserChats chats={state.messagespage.chats}/>
+let mapStateToProps = (state) => {
+  return {
+    chats: state.messagespage.chats,
+  };
 };
 
+const UserChatsContainer = connect(mapStateToProps)(UserChats);
 export default UserChatsContainer;
