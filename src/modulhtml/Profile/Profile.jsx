@@ -1,15 +1,15 @@
 import React from "react";
-import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import Wallpaper from "./wallpaper/wallpaper";
 import style from "./Profile.module.css";
-import Post from "./Post/Post";
+import PostContainer from "./Post/PostContainer";
+import ProfileInfoContainer from "./ProfileInfo/ProfileInfoContainer";
 
-const Profile = (props) => {
+const Profile = () => {
   return (
     <div className={style.body}>
       <Wallpaper />
-      <ProfileInfo state={props.state.data}/>
-      <Post state={props.state.data}/>
+      <ProfileInfoContainer />
+      <PostContainer />
     </div>
   );
 };

@@ -1,13 +1,13 @@
 import React from "react";
 import style from "./Messages.module.css";
-import UserChats from "./UserChats/UserChats";
-import MessagesFromUser from "./MessagesFromUser/MessagesFromUser";
+import UserChatsContainer from "./UserChats/UserChatsContainer";
+import MessagesFromUserContainer from "./MessagesFromUser/MessagesFromUserContainer";
 
-const Messages = (props) => {
+const Messages = () => {
   return (
     <div className={style.body}>
-      <UserChats state={props.state.data}/>
-      <MessagesFromUser state={props.state.data}/>
+      <UserChatsContainer />
+      <MessagesFromUserContainer />
     </div>
   );
 };

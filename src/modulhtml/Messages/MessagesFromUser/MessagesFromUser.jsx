@@ -2,17 +2,35 @@ import React from "react";
 import style from "./MessagesFromUser.module.css";
 
 const MessagesFromUser = (props) => {
+  let newMessageBody = props.newMessageBody;
+
+  let onSendMessageClick = () => {
+    props.sendMessage();
+  };
+
+  let onNewMessageChange = (e) => {
+    let body = e.target.value;
+    props.updateNewMessageBody(body);
+  };
+
   return (
     <div className={style.message}>
-      {props.state.messages.map(({ time, message }) => (
-        <div key={time} className={style.item}>
+      {props.messages.map(({ message }) => (
+        <div key={message} className={style.item}>
           <div>{message}</div>
-          <div className={style.time}>{time}</div>
         </div>
       ))}
       <form className={style.sendmessage}>
-        <textarea className={style.textarea}></textarea>
-        <input type="reset" value="Send message"/>
+        <textarea
+          value={newMessageBody}
+          onChange={onNewMessageChange}
+          className={style.textarea}
+        />
+        <input
+          onClick={onSendMessageClick}
+          type="button"
+          value="Send message"
+        />
       </form>
     </div>
   );

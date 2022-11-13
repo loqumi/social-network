@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./MyPost.module.css";
-const OldPost = (props) => {
+
+const MyPost = (props) => {
   return (
     <div className={style.item}>
       <span className={style.username}>{props.username}</span>
@@ -22,4 +23,4 @@ const OldPost = (props) => {
   );
 };
 // https://www.svgrepo.com/show/13689/like.svg
-export default OldPost;
+export default MyPost;

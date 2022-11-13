@@ -1,13 +1,13 @@
 import React from "react";
-import NewPost from "./NewPost/NewPost";
 import MyPost from "./MyPost/MyPost";
+import NewPostContainer from "./NewPost/NewPostContainer";
 
 const Post = (props) => {
   return (
     <div>
-      <NewPost />
-      {props.state.post.map(({ username, avatar, message, likesCount }) => (
-        <MyPost 
+      <NewPostContainer />
+      {props.post.map(({ username, avatar, message, likesCount }) => (
+        <MyPost
           key={message}
           username={username}
           avatar={avatar}

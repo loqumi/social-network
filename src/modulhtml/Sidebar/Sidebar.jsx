@@ -7,7 +7,7 @@ const Sidebar = (props) => {
     <aside className={`${style.sidebar} container body`}>
       <nav className="main_nav">
         <ul>
-          {props.state.sidebarnav.map(({ href, title }) => (
+          {props.sidebarnav.map(({ href, title }) => (
             <li key={title} className={style.item}>
               <NavLink
                 to={href}
@@ -19,15 +19,16 @@ const Sidebar = (props) => {
               </NavLink>
             </li>
           ))}
-          <li className={style.item}>Friends</li>
-        </ul>
-        <ul className={style.friends}>
-          {props.state.friends.map(({ name, avatar, id }) => (
-            <li key={id} className={style.friend}>
-              <img className={style.avatar} src={avatar} alt="avatar" />
-              <div>{name}</div>
-            </li>
-          ))}
+          <li className={style.item}>Friends
+            <ul className={style.friends}>
+            {props.friends.map(({ name, avatar, id }) => (
+              <li key={id} className={style.friend}>
+                <img className={style.avatar} src={avatar} alt="avatar" />
+                <div>{name}</div>
+              </li>
+            ))}
+            </ul>
+          </li>
         </ul>
       </nav>
     </aside>
